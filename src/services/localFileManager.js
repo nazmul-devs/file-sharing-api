@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import mime from "mime-types";
 import { config } from "dotenv";
-config(); // Load environment variables
+config();
 import FileManagerInterface from "./fileManager.interface.js";
 import { generateKeys, getKeyMapPath } from "../utils/keyGenerator.js";
 class LocalFileManager extends FileManagerInterface {

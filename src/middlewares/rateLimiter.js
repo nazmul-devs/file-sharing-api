@@ -1,27 +1,17 @@
-const rateMap = new Map();
-const LIMIT = 100 * 1024 * 1024; // 100MB/day
+import rateLimit from "express-rate-limit";
 
-const rateLimiter = (req, res, next) => {
-  const ip = req.ip;
-  const today = new Date().toDateString();
+export const uploadLimiter = rateLimit({
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours
+  max: 100, // Limit each IP to 100 uploads per day
+  message: "Daily upload limit exceeded",
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
-  if (!rateMap.has(ip)) {
-    rateMap.set(ip, { date: today, usage: 0 });
-  }
-
-  const usage = rateMap.get(ip);
-  if (usage.date !== today) {
-    usage.date = today;
-    usage.usage = 0;
-  }
-
-  const size = parseInt(req.headers["content-length"]) || 0;
-  if (usage.usage + size > LIMIT) {
-    return res.status(429).json({ error: "Daily bandwidth limit exceeded" });
-  }
-
-  usage.usage += size;
-  next();
-};
-
-export default rateLimiter;
+export const downloadLimiter = rateLimit({
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours
+  max: 1000, // Limit each IP to 1000 downloads per day
+  message: "Daily download limit exceeded",
+  standardHeaders: true,
+  legacyHeaders: false,
+});

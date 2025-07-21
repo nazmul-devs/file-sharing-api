@@ -1,12 +1,22 @@
 import express from "express";
 import multer from "multer";
+import GoogleFileManager from "../services/googleFileManager.js";
 import LocalFileManager from "../services/localFileManager.js";
 const fileRouter = express.Router();
-const fileManager = new LocalFileManager();
+const provider = process.env.PROVIDER || "local";
 
 const upload = multer({ dest: process.env.FOLDER });
 
+let fileManager;
+if (provider === "google") {
+  fileManager = new GoogleFileManager(process.env.CONFIG);
+} else {
+  fileManager = new LocalFileManager();
+}
+
 fileRouter.post("/", upload.single("file"), async (req, res) => {
+  console.error("File upload error:", req.file);
+
   const { filename, originalname } = req.file;
   const result = await fileManager.uploadFile(filename, originalname);
   res.json(result);

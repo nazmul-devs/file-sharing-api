@@ -1,0 +1,14 @@
+{
+  "type": "service_account",
+  "project_id": "infra-analyzer-466609-b5",
+  "private_key_id": "6acc6284b4c20206facb1a1450919cb4b4355cf9",
+  "bucket": "file-sharing",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0NCB0XPlSEc4c\nBKJrLr9B8ok9E0AXAtn1LOJdA7CAP1GvgIq5OfaQB8Ze0CNY1QkvTUc7lq1OYNGm\n6BEiI9Le5yEyOw4AeFYw6VdN9Xe2MF7SKYCkMxI3Fn2HUB8fnpqd8OoO63j0N9Dz\n+au6YluuUHEXT1NvBBQ/97P09SdeIRqXCI9Xe0FP6y/rqm4X+wFuZFgRLmIeYjS0\nUVZhW7xargZhIFeEgFFArWrJLcc4UbOlo+/lJKEQ8/VyP9vR2hFS4ChD6428Ryva\nW1boTETOONy8kzs6NPXsJ0T5QgOGhyxGA5A1uePCNNRLA864B0nHDfrNk37Lz8pZ\nwe1pI6GdAgMBAAECggEADX4VrADGHjH9F7X1H0dZxKtPQUZutwpcnXHl5QcAsSmM\niTJ7sJC5eGFMpg65hs40qNkFa13FzieLqw6XMdIy2MO/hY5MZxabhYADLHAjrX2D\nrAK1ghXc2EkTzwzdt7VdaFQAgmt5G/gN6iaYiBUTPkMBpLgozBgnF/8I919fujlp\nzXaIEz2HM1l8zRkFfa3c8GnFKCgBUZznTHCGAF8ptPiapnEaZ3kzreVTA+rnPbrb\nxSwcJ8ZLFQUTWjThSf4JfFSA/rLEr4JFYvjfkGtGD+dc7ZR+PGG+n6NCN1HGKOz5\n6XA5u2ZEc7F4KjsBilCJBCt3f6EKeDPKDg/2QuC4lQKBgQD4iRep5tregUuo//+w\nVy3MEpcvLB/J4S53e+MtdV4y5gL5TVsnadLXbMJRWugUv7S7E9hodbSn8TNhrr0i\nimwhUSNRVoasV/iEjwVitqGZqW3o6FS6n+NKsuex4l61JMP3JbWbPjlg6ekLDDYB\nVEZOzEPxaRE6oA72xo12pcAc3wKBgQC5nacmxOcAa5FhiTsQ4EtFnxBuBjqaCGTj\nZCiKpHTLVwTogN8Si7L/e7K1MugYYQbnJJvUBwVlhImEnp0zT+qML4s1ZbYW9NJI\n58f4Z5EvLXupipwbCJuyxLS0ZWejLKVf4l8B+g7xqCWa1FC1sAXhU8RDWVD1zF9O\nfwOdlhsVAwKBgH/Uo2Mz5ecDwZKO+UgNzvRjq3cLzt3bADdcdSBweZ7cRzNK4lOH\nTnaW7etCQpRJdf+y2WABCoZGvRLE+WrGn48TWIMBagtCxAQKO87l+IA8cNeWh93l\nVtaY5irML8IjwtdfgeTzQDfkl4SjJzPP0Mm+rkOAsufgY1HyFdisr/8pAoGBAILf\n3xid4wbP0Z0FBqmajFhVlF8Pc0hiPMh8OX2wAU3SWHqbSy4nZBlxnYrXjwCJgTV/\nAYSZQrvWnKPutoaUhZs8dpo60g4TpyWSj9PdKmgqWLQtMG57PlTpD0TW7yEFfMFD\nupuJNfo8Be/KXfINX8gFqS+XjVcSN+z/74uwZ/4DAoGAffGtAyuz/XbUriPDxiya\nG6nwCSEEBWAUVLF5FsA8n2AnYuGjeiuwBQXX6zm1bl+OdElXc7xycwtfLDaw3MdR\noO8L4Mtwq4HRssb8clGx6jkQPDtblIl6O2vCSJu6F0CIDwC51j9tRpCYuAqkRYNO\n20sxXWV/C1W+FlrhqroyNJ4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "flie-sharing@infra-analyzer-466609-b5.iam.gserviceaccount.com",
+  "client_id": "110682565492885885216",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flie-sharing%40infra-analyzer-466609-b5.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
