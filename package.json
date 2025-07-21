@@ -1,13 +1,29 @@
 {
   "name": "file-sharing-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Node.js backend for file upload/download/delete with optional GCS provider.",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express",
+    "file-upload",
+    "api"
+  ],
+  "author": "Nazmul Hosen",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.4.2"
+  }
 }
