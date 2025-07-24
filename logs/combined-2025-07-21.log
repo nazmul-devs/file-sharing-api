@@ -85,3 +85,4 @@
     at async Upload.makeRequest (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:724:21)
     at async AsyncRetry.retries (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:390:29)
     at async Upload.createURIAsync (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:387:21)
+2025-07-21 23:09:30 [info]: Server listening on port 3000
