@@ -1,8 +1,9 @@
 // src/server.ts
 import http from 'http';
-import app from './app';
-import { appConfig } from './core/config/app';
-import { logger } from './core/utils/logger';
+import app from './app.js';
+
+import { appConfig } from './core/config/config.js';
+import { logger } from './core/utils/logger.js';
 
 
 

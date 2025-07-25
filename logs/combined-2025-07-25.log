@@ -1,0 +1,28 @@
+2025-07-25 22:04:28 [info]: 🚀 Naria API is running on http://localhost:3000
+2025-07-25 22:04:30 [info]: 🛑 Shutting down server...
+2025-07-25 22:04:37 [info]: 🚀 Naria API is running on http://localhost:3000
+2025-07-25 22:05:02 [info]: 🚀 Naria API is running on http://localhost:3000
+2025-07-25 22:05:09 [info]: 🚀 Naria API is running on http://localhost:3000
+2025-07-25 22:05:52 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///C:/Users/leyon/OneDrive/Desktop/NZPRO/file-sharing-api/src/api/local_files/localFile.service.js:47:9)
+    at file:///C:/Users/leyon/OneDrive/Desktop/NZPRO/file-sharing-api/src/api/local_files/localFile.routes.js:29:34
+    at Layer.handleRequest (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:295:15
+    at param (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-25 22:06:24 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///C:/Users/leyon/OneDrive/Desktop/NZPRO/file-sharing-api/src/api/local_files/localFile.service.js:47:9)
+    at file:///C:/Users/leyon/OneDrive/Desktop/NZPRO/file-sharing-api/src/api/local_files/localFile.routes.js:29:34
+    at Layer.handleRequest (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:295:15
+    at param (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (C:\Users\leyon\OneDrive\Desktop\NZPRO\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-25 22:08:09 [info]: 🛑 Shutting down server...

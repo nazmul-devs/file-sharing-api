@@ -1,14 +1,15 @@
 import fs from "fs";
-import path from "path";
 import mime from "mime-types";
-import { config } from "dotenv";
-config();
+import path from "path";
+import { appConfig } from "../core/config/config.js";
+import { generateKeys, getKeyMapPath } from "../core/utils/keyGenerator.js";
 import FileManagerInterface from "./fileManager.interface.js";
-import { generateKeys, getKeyMapPath } from "../utils/keyGenerator.js";
+
+
 class LocalFileManager extends FileManagerInterface {
   constructor() {
     super();
-    this.folder = process.env.FOLDER;
+    this.folder = appConfig.folder;
     this.keyMapPath = getKeyMapPath();
     this.keyMap = this.loadKeyMap();
   }

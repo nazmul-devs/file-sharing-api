@@ -3,8 +3,9 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 
-import fileRouter from "./api/files.controller.js";
-import errorMiddleware from "./middlewares/error.middleware.js";
+import router from "./api/routes/routes.js";
+
+import errorMiddleware from "./core/middlewares/error.middleware.js";
 import cloudRoute from "./routes/file.routes.js";
 
 const app = express();
@@ -21,7 +22,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the File Sharing API");
 });
 
-app.use("/files", fileRouter);
+app.use("/", router);
 app.use("/cloud", cloudRoute);
 
 

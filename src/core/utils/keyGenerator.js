@@ -1,5 +1,6 @@
 import { randomUUID } from "crypto";
 import path from "path";
+import { appConfig } from "../config/config.js";
 
 export function generateKeys() {
   return {
@@ -9,5 +10,5 @@ export function generateKeys() {
 }
 
 export function getKeyMapPath() {
-  return path.join(process.env.FOLDER, "_keymap.json");
+  return path.join(appConfig.folder, "_keymap.json");
 }

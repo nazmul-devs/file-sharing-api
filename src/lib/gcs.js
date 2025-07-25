@@ -1,12 +1,14 @@
 import { Storage } from "@google-cloud/storage";
-import dotenv from "dotenv";
-dotenv.config();
+import { appConfig } from "../core/config/config.js";
+
+
 
 const storage = new Storage({
-  projectId: process.env.GOOGLE_CLOUD_PROJECT_ID,
-  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+  projectId: appConfig.googleCloudProjectId,
+  keyFilename: appConfig.googleApplicationCredentials,
 });
 
-const bucket = storage.bucket(process.env.GOOGLE_CLOUD_BUCKET_NAME);
+const bucket = storage.bucket(appConfig.googleCloudBucketName);
 
-export { storage, bucket };
+export { bucket, storage };
+

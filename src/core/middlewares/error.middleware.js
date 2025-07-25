@@ -1,5 +1,6 @@
-import { HttpError } from "../../utils/errors.js";
-import { logger } from "../../utils/logger.js";
+import { appConfig } from "../config/config.js";
+import { HttpError } from "../utils/errors.js";
+import { logger } from "../utils/logger.js";
 
 /**
  * Error middleware with four parameters (err, req, res, next)
@@ -76,7 +77,7 @@ const errorMiddleware = (err, req, res, next) => {
   };
 
   // Include error details in development
-  if (process.env.NODE_ENV === "development") {
+  if (appConfig.nodeEnv === "development") {
     response.error.stack = err.stack;
     if (err.details) response.error.details = err.details;
   }

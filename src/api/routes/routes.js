@@ -1,8 +1,5 @@
-// src/api/routes/index.ts
 import { Router } from 'express';
-import authRoutes from '../auth/auth.route';
-import userRoutes from '../user/user.route';
-// import more routes...
+import localFileRouter from '../local_files/localFile.routes.js';
 
 const router = Router();
 
@@ -12,8 +9,7 @@ router.get('/health', (_req, res) => {
 });
 
 // Modular Routes
-router.use('/auth', authRoutes);
-router.use('/users', userRoutes);
-// router.use('/payments', ...);
+router.use('/files', localFileRouter);
+
 
 export default router;

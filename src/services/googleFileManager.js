@@ -1,7 +1,9 @@
 import { Storage } from "@google-cloud/storage";
 import fs from "fs";
 import path from "path";
-import { generateKeys } from "../utils/keyGenerator.js";
+
+import { appConfig } from "../core/config/config.js";
+import { generateKeys } from "../core/utils/keyGenerator.js";
 import FileManagerInterface from "./fileManager.interface.js";
 
 class GoogleFileManager extends FileManagerInterface {
@@ -25,7 +27,7 @@ class GoogleFileManager extends FileManagerInterface {
   async uploadFile(tempFilename, originalName) {
     const { publicKey, privateKey } = generateKeys();
     const destination = `${publicKey}-${originalName}`;
-    const tempPath = path.join(process.env.FOLDER, tempFilename);
+    const tempPath = path.join(appConfig.folder, tempFilename);
 
     await this.bucket.upload(tempPath, {
       destination,
@@ -72,7 +74,7 @@ class GoogleFileManager extends FileManagerInterface {
     await this.bucket
       .file(value.gcsPath)
       .delete()
-      .catch(() => {});
+      .catch(() => { });
     delete this.keyMap[publicKey];
     this.saveKeyMap();
     return true;
@@ -85,7 +87,7 @@ class GoogleFileManager extends FileManagerInterface {
         await this.bucket
           .file(value.gcsPath)
           .delete()
-          .catch(() => {});
+          .catch(() => { });
         delete this.keyMap[publicKey];
       }
     }

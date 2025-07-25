@@ -10,6 +10,13 @@ export const appConfig = {
   port: parseInt(process.env.PORT || '3000', 10),
   isProd: process.env.NODE_ENV === 'production',
   isDev: process.env.NODE_ENV === 'development',
+  folder: process.env.FOLDER,
+  provider: process.env.PROVIDER || "local",
+  config: process.env.CONFIG,
+  googleCloudProjectId: process.env.GOOGLE_CLOUD_PROJECT_ID,
+  googleApplicationCredentials: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+  googleCloudBucketName: process.env.GOOGLE_CLOUD_BUCKET_NAME || "fileSharing",
+
 
   jwt: {
     secret: process.env.JWT_SECRET || 'default_secret',
