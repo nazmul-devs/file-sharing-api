@@ -1,13 +1,11 @@
-import { config } from "dotenv";
-import express from "express";
-import fileRouter from "./api/files.controller.js";
-import cloudRoute from "./routes/file.routes.js";
-config(); // Load environment variables
-
 import cors from "cors";
+import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+
+import fileRouter from "./api/files.controller.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
+import cloudRoute from "./routes/file.routes.js";
 
 const app = express();
 
@@ -25,6 +23,13 @@ app.get("/", (req, res) => {
 
 app.use("/files", fileRouter);
 app.use("/cloud", cloudRoute);
+
+
+
+// 404 Handler
+app.use((_req, res) => {
+  res.status(404).json({ success: false, message: 'API not found' });
+});
 
 // Error handling middleware
 app.use(errorMiddleware);

@@ -1,5 +1,5 @@
-import { HttpError } from "../utils/errors.js";
-import { logger } from "../utils/logger.js";
+import { HttpError } from "../../utils/errors.js";
+import { logger } from "../../utils/logger.js";
 
 /**
  * Error middleware with four parameters (err, req, res, next)
