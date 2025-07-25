@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import localFileRouter from '../local_files/localFile.routes.js';
+import cloudFileRoute from '../clould_files/cloudFile.routes.js';
 
 const router = Router();
 
@@ -10,6 +11,7 @@ router.get('/health', (_req, res) => {
 
 // Modular Routes
 router.use('/files', localFileRouter);
+router.use('/cloud', cloudFileRoute);
 
 
 export default router;

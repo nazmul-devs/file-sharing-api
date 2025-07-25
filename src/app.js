@@ -6,7 +6,6 @@ import morgan from "morgan";
 import router from "./api/routes/routes.js";
 
 import errorMiddleware from "./core/middlewares/error.middleware.js";
-import cloudRoute from "./routes/file.routes.js";
 
 const app = express();
 
@@ -23,7 +22,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/", router);
-app.use("/cloud", cloudRoute);
+
+
+
 
 
 

@@ -7,6 +7,17 @@ import { logger } from "../utils/logger.js";
  * for centralized error handling
  */
 const errorMiddleware = (err, req, res, next) => {
+
+
+
+  
+
+
+  
+  
+
+
+  
   // Log the error details
   logger.error({
     message: err.message,
@@ -24,6 +35,7 @@ const errorMiddleware = (err, req, res, next) => {
     // Known HTTP errors (validation, not found, etc.)
     return res.status(err.statusCode).json({
       error: {
+         success: false,
         code: err.statusCode,
         message: err.message,
         details: err.details || undefined,
@@ -66,7 +78,7 @@ const errorMiddleware = (err, req, res, next) => {
 
   // Default to 500 for unhandled errors
   const statusCode = err.statusCode || 500;
-  const message = statusCode === 500 ? "Internal Server Error" : err.message;
+  const message = statusCode === 500 ? err?.message  || "Internal Server Error" : err.message;
 
   // Never expose stack traces in production
   const response = {

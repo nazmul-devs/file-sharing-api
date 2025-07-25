@@ -1,8 +1,10 @@
 /**
  * Base HTTP error class for consistent error handling
  */
+
+
 export class HttpError extends Error {
-  constructor(statusCode, message, details) {
+  constructor(statusCode = 500, message = 'Internal Server Error', details = null) {
     super(message);
     this.name = this.constructor.name;
     this.statusCode = statusCode;
@@ -53,5 +55,14 @@ export class NotFoundError extends HttpError {
 export class ConflictError extends HttpError {
   constructor(message = "Conflict", details) {
     super(409, message, details);
+  }
+}
+
+/**
+ * 500 Server Error
+ */
+export class ServerError extends HttpError {
+  constructor(message = "Server Error", details) {
+    super(500, message, details);
   }
 }

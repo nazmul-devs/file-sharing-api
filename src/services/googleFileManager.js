@@ -9,6 +9,13 @@ import FileManagerInterface from "./fileManager.interface.js";
 class GoogleFileManager extends FileManagerInterface {
   constructor(configPath) {
     super();
+
+       // Resolve config path (from env or passed param)
+    if (!configPath) {
+      throw new Error("❌ GoogleFileManager: CONFIG env variable or constructor path is required.");
+    }
+
+
     const config = JSON.parse(fs.readFileSync(configPath));
     this.bucketName = config.bucket;
     this.keyMapPath = path.resolve(config.keyMapPath || "./keymap.json");

@@ -18,7 +18,7 @@ if (appConfig.provider === "google") {
 }
 
 localFileRouter.post("/", upload.single("file"), async (req, res) => {
-  console.error("File upload error:", req.file);
+  // console.error("File upload error:", req.file);
 
   const { filename, originalname } = req.file;
   const result = await fileManager.uploadFile(filename, originalname);

@@ -31,7 +31,7 @@ async function startServer() {
 // Uncaught error handlers
 process.on('uncaughtException', (err) => {
   logger.error('💥 Uncaught Exception: ' + err.message);
-  console.error(err);
+  // console.error(err);
   process.exit(1);
 });
 
