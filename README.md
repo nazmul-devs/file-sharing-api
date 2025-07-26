@@ -21,17 +21,23 @@ A simple Node.js + Express API for uploading, listing, viewing, and deleting fil
 
 ## 📦 Installation
 
+```bash
 git clone https://github.com/nazmul-devs/file-sharing-api.git
 cd file-sharing-api
 npm install
+```
 
 ## 🚀 Server run on
 
+```bash
 http://localhost:3000
+```
 
 ## 🔗 API Routes
 
+```bash
 Create (Upload): POST http://localhost:3000/files Body: form-data (key: file)
 Get All Files: GET http://localhost:3000/files
 View a File: GET http://localhost:3000/files/:publicKey
 Delete a File: DELETE http://localhost:3000/files/:privateKey
+```
