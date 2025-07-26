@@ -1,0 +1,264 @@
+2025-07-26 14:37:23 [error]: HttpError: No file uploaded
+    at file:///E:/templates/file-sharing-api/src/api/clould_files/cloudFile.routes.js:36:11
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at multerMiddleware (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:19:41)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+2025-07-26 14:38:08 [error]: 💥 Uncaught Exception: The billing account for the owning project is disabled in state closed
+2025-07-26 14:39:37 [error]: 💥 Uncaught Exception: Hello testing....
+2025-07-26 14:40:29 [error]: 💥 Uncaught Exception: Hello testing...
+2025-07-26 14:40:58 [error]: HttpError: No file uploadedas
+    at file:///E:/templates/file-sharing-api/src/api/clould_files/cloudFile.routes.js:43:11
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at multerMiddleware (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:19:41)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+2025-07-26 14:41:52 [error]: HttpError: No file uploadedas
+    at file:///E:/templates/file-sharing-api/src/api/clould_files/cloudFile.routes.js:37:11
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at multerMiddleware (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:19:41)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+2025-07-26 14:43:39 [error]: HttpError: No file uploaded
+    at file:///E:/templates/file-sharing-api/src/api/clould_files/cloudFile.routes.js:38:11
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at multerMiddleware (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:19:41)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+2025-07-26 14:44:06 [error]: 💥 Uncaught Exception: Hello error
+2025-07-26 14:44:29 [error]: HttpError: Hello error
+    at file:///E:/templates/file-sharing-api/src/api/clould_files/cloudFile.routes.js:40:11
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at done (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:63:68)
+    at Multipart.<anonymous> (E:\templates\file-sharing-api\node_modules\multer\lib\make-middleware.js:187:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:148:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+2025-07-26 14:46:45 [error]: Error: {
+  "error": {
+    "code": 403,
+    "message": "The billing account for the owning project is disabled in state closed",
+    "errors": [
+      {
+        "message": "The billing account for the owning project is disabled in state closed",
+        "domain": "global",
+        "reason": "accountDisabled",
+        "locationType": "header",
+        "location": "Authorization"
+      }
+    ]
+  }
+}
+
+    at Gaxios._request (E:\templates\file-sharing-api\node_modules\gaxios\build\src\gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async JWT.requestAsync (E:\templates\file-sharing-api\node_modules\google-auth-library\build\src\auth\oauth2client.js:429:18)
+    at async Upload.makeRequest (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:724:21)
+    at async AsyncRetry.retries (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:390:29)
+    at async Upload.createURIAsync (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:387:21)
+2025-07-26 15:11:02 [error]: Error: {
+  "error": {
+    "code": 403,
+    "message": "The billing account for the owning project is disabled in state closed",
+    "errors": [
+      {
+        "message": "The billing account for the owning project is disabled in state closed",
+        "domain": "global",
+        "reason": "accountDisabled",
+        "locationType": "header",
+        "location": "Authorization"
+      }
+    ]
+  }
+}
+
+    at Gaxios._request (E:\templates\file-sharing-api\node_modules\gaxios\build\src\gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async JWT.requestAsync (E:\templates\file-sharing-api\node_modules\google-auth-library\build\src\auth\oauth2client.js:429:18)
+    at async Upload.makeRequest (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:724:21)
+    at async AsyncRetry.retries (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:390:29)
+    at async Upload.createURIAsync (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:387:21)
+2025-07-26 15:11:58 [error]: Error: {
+  "error": {
+    "code": 403,
+    "message": "The billing account for the owning project is disabled in state closed",
+    "errors": [
+      {
+        "message": "The billing account for the owning project is disabled in state closed",
+        "domain": "global",
+        "reason": "accountDisabled",
+        "locationType": "header",
+        "location": "Authorization"
+      }
+    ]
+  }
+}
+
+    at Gaxios._request (E:\templates\file-sharing-api\node_modules\gaxios\build\src\gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async JWT.requestAsync (E:\templates\file-sharing-api\node_modules\google-auth-library\build\src\auth\oauth2client.js:429:18)
+    at async Upload.makeRequest (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:724:21)
+    at async AsyncRetry.retries (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:390:29)
+    at async Upload.createURIAsync (file:///E:/templates/file-sharing-api/node_modules/@google-cloud/storage/build/esm/src/resumable-upload.js:387:21)
+2025-07-26 15:21:01 [error]: ReferenceError: next is not defined
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:28:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-26 15:22:43 [error]: ReferenceError: next is not defined
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:28:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///E:/templates/file-sharing-api/src/core/utils/asyncWrapper.js:4:7
+2025-07-26 15:44:22 [error]: ReferenceError: next is not defined
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:30:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///E:/templates/file-sharing-api/src/core/utils/asyncWrapper.js:4:7
+2025-07-26 15:44:42 [error]: ReferenceError: next is not defined
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:32:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///E:/templates/file-sharing-api/src/core/utils/asyncWrapper.js:4:7
+2025-07-26 15:47:24 [error]: ReferenceError: next is not defined
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:32:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///E:/templates/file-sharing-api/src/core/utils/asyncWrapper.js:4:7
+2025-07-26 15:59:34 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:47:9)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:53:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:38:27 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:62:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:38:51 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:62:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:39:06 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:63:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:39:20 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:63:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:41:28 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:64:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:41:30 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:64:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:41:40 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:62:19)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:41:59 [error]: ReferenceError: value is not defined
+    at LocalFileManager.downloadFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:61:19)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:62:34
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 16:43:28 [error]: ReferenceError: Cannot access 'value' before initialization
+    at LocalFileManager.deleteFile (file:///E:/templates/file-sharing-api/src/api/local_files/localFile.service.js:77:5)
+    at file:///E:/templates/file-sharing-api/src/api/local_files/localFile.routes.js:70:36
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:600:14)
+    at param (E:\templates\file-sharing-api\node_modules\router\index.js:610:14)
+2025-07-26 17:01:30 [error]: TypeError: Cannot read properties of undefined (reading 'services')
+    at getAllFiles (file:///E:/templates/file-sharing-api/src/api/file_manager/fileManager.controller.js:32:29)
+    at file:///E:/templates/file-sharing-api/src/core/utils/asyncWrapper.js:4:13
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at next (E:\templates\file-sharing-api\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\templates\file-sharing-api\node_modules\router\lib\route.js:117:3)
+    at handle (E:\templates\file-sharing-api\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\templates\file-sharing-api\node_modules\router\lib\layer.js:152:17)
+    at E:\templates\file-sharing-api\node_modules\router\index.js:295:15
+    at processParams (E:\templates\file-sharing-api\node_modules\router\index.js:582:12)
+    at next (E:\templates\file-sharing-api\node_modules\router\index.js:291:5)

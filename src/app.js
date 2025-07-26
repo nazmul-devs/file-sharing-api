@@ -4,7 +4,6 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import router from "./api/routes/routes.js";
-
 import errorMiddleware from "./core/middlewares/error.middleware.js";
 
 const app = express();
@@ -17,20 +16,15 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("Welcome to the File Sharing API");
 });
 
 app.use("/", router);
 
-
-
-
-
-
 // 404 Handler
 app.use((_req, res) => {
-  res.status(404).json({ success: false, message: 'API not found' });
+  res.status(404).json({ success: false, message: "API not found" });
 });
 
 // Error handling middleware

@@ -2,19 +2,21 @@ import { Storage } from "@google-cloud/storage";
 import fs from "fs";
 import path from "path";
 
+import FileManagerInterface from "../api/file_manager/fileManager.interface.js";
 import { appConfig } from "../core/config/config.js";
+import { HttpError } from "../core/utils/errors.js";
 import { generateKeys } from "../core/utils/keyGenerator.js";
-import FileManagerInterface from "./fileManager.interface.js";
 
-class GoogleFileManager extends FileManagerInterface {
+class GoogleFileService extends FileManagerInterface {
   constructor(configPath) {
     super();
 
-       // Resolve config path (from env or passed param)
+    // Resolve config path (from env or passed param)
     if (!configPath) {
-      throw new Error("❌ GoogleFileManager: CONFIG env variable or constructor path is required.");
+      throw new Error(
+        "❌ GoogleFileService: CONFIG env variable or constructor path is required."
+      );
     }
-
 
     const config = JSON.parse(fs.readFileSync(configPath));
     this.bucketName = config.bucket;
@@ -32,28 +34,53 @@ class GoogleFileManager extends FileManagerInterface {
   }
 
   async uploadFile(tempFilename, originalName) {
-    const { publicKey, privateKey } = generateKeys();
-    const destination = `${publicKey}-${originalName}`;
-    const tempPath = path.join(appConfig.folder, tempFilename);
+    try {
+      const { publicKey, privateKey } = generateKeys();
+      const destination = `${publicKey}-${originalName}`;
+      const tempPath = path.join(appConfig.folder, tempFilename);
 
-    await this.bucket.upload(tempPath, {
-      destination,
-      contentType: "auto",
-    });
+      // Upload to GCS
+      await this.bucket.upload(tempPath, {
+        destination,
+        contentType: "auto",
+      });
 
-    this.keyMap[publicKey] = {
-      privateKey,
-      originalName,
-      gcsPath: destination,
-      createdAt: Date.now(),
-    };
-    this.saveKeyMap();
+      // Save key map
+      this.keyMap[publicKey] = {
+        privateKey,
+        originalName,
+        gcsPath: destination,
+        createdAt: Date.now(),
+      };
+      this.saveKeyMap();
 
-    // Remove local file after upload
-    fs.unlinkSync(tempPath);
+      // Remove local file after upload
+      fs.unlinkSync(tempPath);
 
-    return { publicKey, privateKey };
+      return { publicKey, privateKey };
+    } catch (err) {
+      const error = JSON.parse(err.message)?.error;
+      throw new HttpError(error?.code, error?.message, error?.errors);
+    }
   }
+
+  // 📜 Get all files in the bucket
+  getAllFiles = async () => {
+    try {
+      const [files] = await bucket.getFiles(); // Fetch all files
+      const fileList = files.map((file) => ({
+        name: file.name,
+        size: file.metadata.size,
+        contentType: file.metadata.contentType,
+        updated: file.metadata.updated,
+        publicUrl: `https://storage.googleapis.com/${bucket.name}/${file.name}`,
+      }));
+
+      res.status(200).send({ success: true, files: fileList });
+    } catch (error) {
+      res.status(500).send({ error: error.message });
+    }
+  };
 
   async downloadFile(publicKey) {
     const entry = this.keyMap[publicKey];
@@ -81,7 +108,7 @@ class GoogleFileManager extends FileManagerInterface {
     await this.bucket
       .file(value.gcsPath)
       .delete()
-      .catch(() => { });
+      .catch(() => {});
     delete this.keyMap[publicKey];
     this.saveKeyMap();
     return true;
@@ -94,7 +121,7 @@ class GoogleFileManager extends FileManagerInterface {
         await this.bucket
           .file(value.gcsPath)
           .delete()
-          .catch(() => { });
+          .catch(() => {});
         delete this.keyMap[publicKey];
       }
     }
@@ -102,4 +129,4 @@ class GoogleFileManager extends FileManagerInterface {
   }
 }
 
-export default GoogleFileManager;
+export default GoogleFileService;

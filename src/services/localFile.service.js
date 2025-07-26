@@ -1,15 +1,15 @@
 import fs from "fs";
 import mime from "mime-types";
 import path from "path";
+
+import FileManagerInterface from "../api/file_manager/fileManager.interface.js";
 import { appConfig } from "../core/config/config.js";
 import { generateKeys, getKeyMapPath } from "../core/utils/keyGenerator.js";
-import FileManagerInterface from "./fileManager.interface.js";
 
-
-class LocalFileManager extends FileManagerInterface {
+class LocalFileService extends FileManagerInterface {
   constructor() {
     super();
-    this.folder = appConfig.folder;
+    this.folder = appConfig.folder || "/absolute/path/to/uploads";
     this.keyMapPath = getKeyMapPath();
     this.keyMap = this.loadKeyMap();
   }
@@ -25,6 +25,7 @@ class LocalFileManager extends FileManagerInterface {
     fs.writeFileSync(this.keyMapPath, JSON.stringify(this.keyMap, null, 2));
   }
 
+  /** upload file */
   async uploadFile(filename, originalName) {
     const { publicKey, privateKey } = generateKeys();
     this.keyMap[publicKey] = {
@@ -37,9 +38,27 @@ class LocalFileManager extends FileManagerInterface {
     return { publicKey, privateKey };
   }
 
+  /** Get all files metadata */
+  async getAllFiles() {
+    return Object.entries(this.keyMap).map(([publicKey, value]) => {
+      const filePath = path.join(this.folder, value.filename);
+      return {
+        publicKey,
+        privateKey: value.privateKey,
+        originalName: value.originalName,
+        createdAt: value.createdAt,
+        exists: fs.existsSync(filePath),
+        mimeType: mime.lookup(value.originalName) || "application/octet-stream",
+        size: fs.existsSync(filePath) ? fs.statSync(filePath).size : 0,
+      };
+    });
+  }
+
+  /** download file */
   async downloadFile(publicKey) {
     const entry = this.keyMap[publicKey];
     if (!entry) return null;
+
     const filePath = path.join(this.folder, entry.filename);
     if (!fs.existsSync(filePath)) return null;
 
@@ -49,6 +68,7 @@ class LocalFileManager extends FileManagerInterface {
     };
   }
 
+  /** delete file */
   async deleteFile(privateKey) {
     const entry = Object.entries(this.keyMap).find(
       ([, value]) => value.privateKey === privateKey
@@ -64,6 +84,7 @@ class LocalFileManager extends FileManagerInterface {
     return true;
   }
 
+  /** cleanup inactive files */
   async cleanupInactiveFiles(expiryTime = 24 * 3600 * 1000) {
     const now = Date.now();
     for (const [publicKey, value] of Object.entries(this.keyMap)) {
@@ -77,4 +98,4 @@ class LocalFileManager extends FileManagerInterface {
   }
 }
 
-export default LocalFileManager;
+export default LocalFileService;

@@ -3,6 +3,10 @@ class FileManagerInterface {
     throw new Error("uploadFile not implemented");
   }
 
+  async getAllFiles() {
+    throw new Error("Get all files not implemented");
+  }
+
   async downloadFile(publicKey) {
     throw new Error("downloadFile not implemented");
   }

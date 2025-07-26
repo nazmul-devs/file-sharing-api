@@ -1,7 +1,5 @@
 import { Storage } from "@google-cloud/storage";
-import { appConfig } from "../core/config/config.js";
-
-
+import { appConfig } from "../config/config.js";
 
 const storage = new Storage({
   projectId: appConfig.googleCloudProjectId,
@@ -11,4 +9,3 @@ const storage = new Storage({
 const bucket = storage.bucket(appConfig.googleCloudBucketName);
 
 export { bucket, storage };
-
