@@ -1,10 +1,9 @@
-import LocalFileManager from "../services/localFileManager.js";
-
-const fileManager = new LocalFileManager();
+import fileManagerService from "../api/file_manager/fileManager.service.js";
+import { appConfig } from "../core/config/config.js";
 
 export function cleanupJob() {
   setInterval(() => {
-    fileManager.cleanupInactiveFiles();
+    fileManagerService.cleanupInactiveFiles(appConfig.fileExpiryTimeMs);
     console.log("🧹 Cleaned up old files");
-  }, 3600 * 1000); // every 1 hour
+  }, appConfig.cleanupIntervalMs);
 }

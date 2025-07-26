@@ -114,7 +114,7 @@ class GoogleFileService extends FileManagerInterface {
     return true;
   }
 
-  async cleanupInactiveFiles(expiryTime = 24 * 3600 * 1000) {
+  async cleanupInactiveFiles(expiryTime) {
     const now = Date.now();
     for (const [publicKey, value] of Object.entries(this.keyMap)) {
       if (now - value.createdAt > expiryTime) {

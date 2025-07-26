@@ -1,6 +1,12 @@
 import fileManagerService from "./fileManager.service.js";
 
 class FileController {
+  /**
+   * Upload file
+   * @param {*} req
+   * @param {*} res
+   * @returns
+   */
   async uploadFile(req, res) {
     if (!req.file) {
       return res.status(400).json({
@@ -29,11 +35,22 @@ class FileController {
     }
   }
 
+  /**
+   * get all files
+   * @param {*} req
+   * @param {*} res
+   */
   async getAllFiles(req, res) {
     const data = await fileManagerService.getAllFiles();
     res.json({ success: true, data });
   }
 
+  /**
+   * download file
+   * @param {*} req
+   * @param {*} res
+   * @returns
+   */
   async downloadFile(req, res) {
     const file = await fileManagerService.downloadFile(req.params.publicKey);
     if (!file) return res.status(404).json({ error: "File not found" });
@@ -42,6 +59,12 @@ class FileController {
     file.stream.pipe(res);
   }
 
+  /**
+   * delete file
+   * @param {*} req
+   * @param {*} res
+   * @returns
+   */
   async deleteFile(req, res) {
     const result = await fileManagerService.deleteFile(req.params.privateKey);
     if (!result) return res.status(404).json({ error: "File not found" });
