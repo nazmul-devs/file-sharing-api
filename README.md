@@ -27,6 +27,13 @@ cd file-sharing-api
 npm install
 ```
 
+## 🚀 Server run and test
+
+```bash
+npm start
+npm test
+```
+
 ## 🚀 Server run on
 
 ```bash
